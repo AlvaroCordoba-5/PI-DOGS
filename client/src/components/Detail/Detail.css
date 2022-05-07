@@ -1,0 +1,34 @@
+.Detail{
+    background-image: url('./backDetail.jpg');
+    height: 900px;
+}
+
+
+.imgDetail{
+    width: 600px;
+    height:550px;
+    border-radius: 7px;
+    margin-left: 20px;
+    box-shadow: 0 5px 10px;
+    margin-right: 20px;
+}
+.DetailContainer{
+    display:flex;
+    justify-content:flex-start
+}
+
+.info{
+    margin-left: 60px;
+    border-radius:7px;
+    box-shadow: 0 5px 10px;
+    background-color:#62789c;
+    width: 600px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.separador{
+    height: 200px;
+    width: 100%;
+    
+}

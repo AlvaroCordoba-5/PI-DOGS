@@ -1,0 +1,20 @@
+.paginado{
+    display:flex;
+
+}
+
+.li{
+    list-style:none;
+
+}
+
+.boton{
+    background-color: #fff3e7;
+    transition: transform .2s;
+    border-radius:7px
+}
+.boton:hover{
+    background-color:#042e44;
+    color:white;
+    transform: scale(1.5);
+}

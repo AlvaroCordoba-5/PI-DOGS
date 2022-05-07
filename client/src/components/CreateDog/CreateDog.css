@@ -1,0 +1,89 @@
+.inputs{
+    margin: 4px;
+    border-radius: 7px;
+}
+.input{
+    border-radius: 7px;
+}
+
+
+.Button {
+    background-color: #62789c;
+    border: none;
+    border-radius: 7px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin:5px;
+    margin-left: 10px;
+    transition: transform .2s;
+}
+.Button:hover{
+    background-color:#fff3e7;
+    color:rgb(21, 16, 16);
+    transform: scale(1.3);
+   
+}
+.link{
+    color:white;
+    text-decoration:none;
+}
+.temcontainer{
+    display: flex;
+    justify-content:space-between;
+    width: 100%;
+}
+.temperament{
+    display:flex;
+    justify-content:space-between;
+}
+.form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 400px;
+    height: 480px;
+    background-image: url('./BackgroundForm2.jpg');
+    background-color:#e8dad9;
+    border-radius:7px;
+    box-shadow: 0 5px 10px
+ 
+}
+.box{
+    background-image: url('./Form1.jpg');
+    background-color:blue;
+    width:100%;
+height:600px;
+border-radius: 7px;
+display: flex;
+    justify-content: center;
+}
+
+.delete{
+   width:120px;
+    background-color:red;
+    border-radius: 7px;
+    display: flex;
+    flex-wrap: nowrap;
+}
+.but{
+    height: 50%
+}
+.conTemp{
+    display:grid;
+    grid-template-columns: repeat(1,1fr);
+}
+.bot{
+    width: 250px;
+    background-color: #fff3e7;
+    transition: transform .2s;
+    border-radius:7px
+}
+.bot:hover{
+    background-color:#042e44;
+    color:white;
+    transform: scale(1.5);
+}

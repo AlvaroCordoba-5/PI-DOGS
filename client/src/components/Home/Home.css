@@ -1,0 +1,30 @@
+.container-card{
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    background-color:#ede9e8
+    
+}
+
+.paginado{
+    display:flex;
+   justify-content:center;
+   background-color:#e8dad9
+}
+
+.App{
+    border-radius:2px solid black;
+    color:white;
+    background-color:#042e44; 
+    justify-content:center;
+}
+
+
+
+
+  .filtros{
+    display:flex;
+    justify-content:center;
+    height:100px;
+    align-items:center;
+    background-color: rgb(98, 120, 156);
+  }

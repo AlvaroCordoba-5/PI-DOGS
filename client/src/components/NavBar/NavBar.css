@@ -1,0 +1,25 @@
+.container{
+    display:flex;
+    justify-content:center;
+
+}
+
+.App{
+    border-radius:2px solid black;
+    color:white;
+    background-color:#042e44; 
+    justify-content:center;
+    width:100%;
+    height:130px
+}
+
+.Henry{
+  display: inline-block;
+  margin-left:10px
+}
+
+.Search{
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+  }

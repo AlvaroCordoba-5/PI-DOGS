@@ -26,12 +26,13 @@ next(err)    }
 })
 
 
-router.get("/:idRaza", async (req, res) => {
+router.get("/:idRaza", async (req, res,next) => {
     try{
         const {idRaza} = req.params
         const Dogs = await getAll()
         
         if(idRaza){
+           
             let idFoundDog = Dogs.filter(e => e.id == idRaza)
             if(idFoundDog.length){
                 res.status(200).json(idFoundDog)

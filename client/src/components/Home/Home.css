@@ -1,7 +1,14 @@
+.containerall{
+  display: flex;
+  justify-content: center;
+  background-color:#ede9e8;
+
+}
 .container-card{
     display:grid;
     grid-template-columns: repeat(4,1fr);
-    background-color:#ede9e8
+    background-color:#ede9e8;
+    margin:40px
     
 }
 
@@ -27,4 +34,24 @@
     height:100px;
     align-items:center;
     background-color: rgb(98, 120, 156);
+  
   }
+  .searchdog{
+    display:flex;
+    justify-content:center;
+    background-color:rgb(98, 120, 156);
+  }
+  .contSearch{
+    margin-top:15px
+  }
+  .selects{
+    background-color:white;
+    border-radius: 7px;
+    
+  }
+  .loadhome{
+    display:grid;
+    grid-column-end:3;
+    margin-left: 320px;
+  }
+ 

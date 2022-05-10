@@ -4,7 +4,7 @@ import Landing from './components/Landing/Landing'
 import Home from './components/Home/Home'
 import CreateDog from './components/CreateDog/CreateDog';
 import Detail from './components/Detail/Detail'
-import NavBar from './components/NavBar/NavBar'
+
 
 function App() {
 

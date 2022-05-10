@@ -1,24 +1,34 @@
 import React from 'react';
 import './Landing.css';
 import { Link } from "react-router-dom";
-//import DogPhoto from '../Landing/dogLanding.jpg'
+import DogPhoto from '../Landing/FondoAzulDegradadoCentro(1).png'
+
+
+/*<div className='landText'>
+<h1>Welcome <br></br> To Henry Dogs</h1>
+
+</div>*/
+
+
 
 export default function landing(){
-//<img src={DogPhoto} alt="Dog" />
+
   return(
 
 <React.Fragment>
 
+
 <div className="Contenedor">
 
-<h1>Welcome to Henry Dogs</h1>
-
+ <img className='landimage' src={DogPhoto} alt="Dog" />
  
- <Link to={"/Home"}>Home</Link> 
-
-    
+ <div className="texto-encima">
+   <h1>Welcome <br></br> To Henry Dogs</h1>
+   <Link className='link' to='/Home'>Home</Link>
+   </div>
 </div>
 
+ 
 </React.Fragment>
 
 

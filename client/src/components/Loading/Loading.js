@@ -1,12 +1,19 @@
 import React from 'react'
-import image from './image2.gif'
-import Loading from './Loading.css'
+import './Loading.css'
 
-export default function loading() {
+export default function loading({image,text}) {
   return (
+    <React.Fragment>
+      <div className="textloading">
+     <h1>{text}</h1>
+     </div>
       <div className="image">
+        
+       
+        
     <img src={image} alt='Loading'/>
-    </div>
+</div>
+</React.Fragment>
   )
 }
 

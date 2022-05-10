@@ -10,7 +10,7 @@ export const FILTER_BY_API_OR_DATABASE ="FILTER_BY_API_OR_DATABASE";
 export const ORDER_BY_ALPHABET = "ORDER_BY_ALPHABET"
 export const CREATE_DOG="CREATE_DOG";
 export const DOG_DETAIL = "DOG_DETAIL"
-export const DELETE_DOG = "DELETE_DOG";
+export const REMOVE_DEATAIL = "REMOVE_DEATAIL";
 
 export const getAllDogs = () => {
     return async function (dispatch) {
@@ -91,4 +91,9 @@ export const dogDetail=(idRaza)=>{
   dispatch({type:DOG_DETAIL , payload:response})
   }
 }
-        
+
+export const removeDetail= ()=>{
+        return {
+                 type:REMOVE_DEATAIL            
+        }
+        }   

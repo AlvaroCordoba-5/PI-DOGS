@@ -13,7 +13,7 @@ function validate(input) {
 		errors.name = 'name is requiere';
 	} 
   if (!input.life) {
-		errors.life = 'life is requiere';
+		errors.life = 'life span is requiere';
 	} else if (!input.height_min) {
 		errors.height_min = 'height min is requiere';
 	} else if (!input.height_max) {
@@ -49,6 +49,8 @@ export default function CreateDog() {
 		weight_max: '',
 		life: ''
 	});
+
+	
 
 	useEffect(
 		() => {
@@ -127,7 +129,7 @@ export default function CreateDog() {
 
 			<div className="box">
 				<form className="form" onSubmit={(e) => handleSubmit(e)}>
-					<h1>Create your Dog</h1>
+					<h2>Create your Dog</h2>
 					{errors.name && <h4 className="error">{errors.name}</h4>}
 
 					<div className="inputs">
@@ -252,7 +254,7 @@ export default function CreateDog() {
 			<div className="tempCont">
 				{input.temperaments.map((el) => (
 					<div className="delete">
-						<h4>{el}</h4>
+						<h5>{el}</h5>
 						<button className="but" onClick={() => handleDelete(el)}>
 							x
 						</button>

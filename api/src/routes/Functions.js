@@ -79,4 +79,4 @@ return temps
 
 
 
-module.exports ={getAll,DataBase}
+module.exports ={getAll,DataBase,getApi}

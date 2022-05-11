@@ -11,6 +11,7 @@ export const ORDER_BY_ALPHABET = "ORDER_BY_ALPHABET"
 export const CREATE_DOG="CREATE_DOG";
 export const DOG_DETAIL = "DOG_DETAIL"
 export const REMOVE_DETAIL = "REMOVE_DETAIL";
+export const WEIGHT_SEARCH = "WEIGHT_SEARCH";
 
 export const getAllDogs = () => {
     return async function (dispatch) {
@@ -93,3 +94,5 @@ export const removeDetail= ()=>{
                  type:REMOVE_DETAIL            
         }
         }   
+
+      

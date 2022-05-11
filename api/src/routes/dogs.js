@@ -1,12 +1,12 @@
 const { Router } = require('express');
 const router = Router();
-const {getAll} = require('./Functions.js');
+const {getApi,getAll} = require('./Functions.js');
+const {Dog,Temperament} =require('../db')
 
 
 
 
-
-router.get('/',async(req ,res)=> {
+router.get('/',async(req ,res,next)=> {
     try{
       const{name}=req.query;
 const response= await getAll();
@@ -29,24 +29,36 @@ next(err)    }
 router.get("/:idRaza", async (req, res,next) => {
     try{
         const {idRaza} = req.params
-        const Dogs = await getAll()
+        const api = await getApi()
         
+    
+
         if(idRaza){
+
+       let dogsApi = api.filter(e => e.id == idRaza)
            
-            let idFoundDog = Dogs.filter(e => e.id == idRaza)
-            if(idFoundDog.length){
-                res.status(200).json(idFoundDog)
+          var returnFoundDog = idRaza.length<10?dogsApi: [await Dog.findByPk(idRaza,{
+                include:{
+                    model:Temperament,
+                    attributes:["name"],
+                    through:{
+                        attributes:[],
+                    },
+                },
+            })
+        ];
+
+        }
+            if(returnFoundDog.length){
+                res.status(200).json(returnFoundDog)
             } else{
                 res.status(404).send("Dog Not Found")
             }
-        }
-    } catch(error){
+       
+    }catch(error){
         next(error)
     }
 })
-
-
-
 
 
 

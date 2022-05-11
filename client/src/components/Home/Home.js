@@ -10,7 +10,6 @@ import {
 	FilterByTemperament,
 	FilterApiOrDatabase,
 	removeDetail
-	
 } from '../../redux/action';
 import { Link } from 'react-router-dom';
 import Card from '../Card/Card.js';
@@ -32,6 +31,7 @@ export default function Home() {
 	const indexOfFirstDog = indexOfLastDog - dogsPerPage;
 	const currentDog = allDogs.slice(indexOfFirstDog, indexOfLastDog);
 	const [ name, setName ] = useState('');
+
 	const paginado = (pageNumber) => {
 		setCurrentPage(pageNumber);
 	};
@@ -61,6 +61,7 @@ export default function Home() {
 		e.preventDefault();
 		setName(e.target.value);
 	};
+	
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
@@ -68,6 +69,7 @@ export default function Home() {
 		setName('');
 		setCurrentPage(1);
 	};
+	
 
 	const handleSort = (e) => {
 		e.preventDefault();
@@ -114,6 +116,8 @@ export default function Home() {
 				
 				</div>
 			</form>
+
+	
 
 			<div className="filtros">
 				<div className="Temperament">

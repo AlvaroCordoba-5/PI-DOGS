@@ -78,13 +78,14 @@ display: flex;
     color:white;
     border-radius: 7px;
     display: flex;
-    justify-content: center;
+    justify-content:flex-end;
     text-align: center;
 }
 .delete button{
 height: 20px;
 color:white;
 background-color:#62789c;
+
 }
 
 .delete button:hover{

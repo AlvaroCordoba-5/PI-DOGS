@@ -15,8 +15,8 @@ return(
     <div className='face back'>
     <h2>{name}</h2>
    <h4>Temperaments: {temperaments}</h4>  
-   <h4>Weight min:{weight_min}</h4>
-   <h4>Weight max:{weight_max}</h4>
+   <h4>Weight min(kg): {weight_min}</h4>
+   <h4>Weight max(kg): {weight_max}</h4>
 </div>
 </div>
 

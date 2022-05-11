@@ -1,7 +1,8 @@
 .Contenedor{
     position: relative;
-
     text-align: center;
+    height:940px;
+    background-color:#0b1727
 }
 
 .texto-encima{
@@ -12,16 +13,22 @@
     font-size:70px;
     display: flex;
 }
+.texto-encima img{
+    width: 450px;
+    height: 500px;
+    
+}
 
 
 .link{ 
     color:white;
     text-decoration: none;
-   background-color:#042e44;
+   background-color:#172f50;
    border-radius: 7px;
    padding: 7px;
    height: 100px;
    margin-top: 500px;
+   margin-right: 300px;
 }
 .link:hover{
     color:BLACK
@@ -29,6 +36,7 @@
 
 
 .landimage{
-    width: 100%;
-    height:100%
+    width:100%;
+    height: 900px;
+   
 }

@@ -26,15 +26,6 @@ try{
 
    
 
-
-    /*for (let i = 0; i < temperaments.length; i++) {
-        
-        const addTemp = await Temperament.findAll({
-          where: { name: temperaments[i] },
-        });
-        dogCreated.addTemperament(addTemp);
-      }*/
-
    dogCreated.addTemperament(temperamentDb)
 
     res.send('Dog Created!')

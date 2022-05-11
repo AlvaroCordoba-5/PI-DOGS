@@ -25,13 +25,14 @@
     margin-left: 100px;
     border-radius:7px;
     box-shadow: 0 5px 10px;
-    background-color:#62789c;
+    background-color:#f5ab62;
     width: 600px;
     height: 650px;
     display: flex;
     align-items: center;
     flex-direction: column;
     margin-top:50px;
+    border: 3px black solid
 }
 .info2{
     display: flex;

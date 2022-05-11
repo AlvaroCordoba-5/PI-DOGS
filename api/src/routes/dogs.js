@@ -41,7 +41,7 @@ router.get("/:idRaza", async (req, res,next) => {
             }
         }
     } catch(error){
-        next()
+        next(error)
     }
 })
 

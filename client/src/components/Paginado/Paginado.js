@@ -12,7 +12,7 @@ for(let i=1 ; i<=Math.ceil(allDogs/dogsPerPage); i++){
     return(
 
 <nav >
-    <ul className='paginado' >
+    <ul className='paginad' >
         {pageNumbers && pageNumbers.map(number=>{
            return( <li className='li' key={number} >
             <button  className='boton'onClick={()=>paginado(number)}>{number}</button>

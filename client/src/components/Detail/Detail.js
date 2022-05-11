@@ -1,5 +1,5 @@
 import React from 'react'
-import { useEffect} from 'react'
+import { useState,useEffect} from 'react'
 import {useDispatch,useSelector} from 'react-redux'
 import {dogDetail} from '../../redux/action'
 import NavBar from '../NavBar/NavBar';
@@ -12,10 +12,13 @@ import imagen from './image2.gif'
 export default function Detail(props) {
   
   const dispatch =useDispatch();
-  
+
+
+
 
   useEffect(() => {
-  dispatch(dogDetail(props.match.params.id))
+  dispatch(dogDetail(props.match.params.id)) 
+  
 },[dispatch])
 
   const dog = useSelector((state) => state.dogsDetail)
@@ -40,10 +43,10 @@ export default function Detail(props) {
                           <div className='detailtemp'>
                           <h4>{dog[0].Api? dog[0].temperament : dog[0].temperaments?.map(e=> e.name + (' ')).toString()}</h4>
                           </div>
-                          <h4>Weight Min: {dog[0].weight_min}</h4>
-                          <h4>Weight Max: {dog[0].weight_max}</h4>
-                          <h4>Height Min: {dog[0].height_min}</h4>
-                          <h4>Height Max: {dog[0].height_max}</h4>
+                          <h4>Weight Min(kg): {dog[0].weight_min}</h4>
+                          <h4>Weight Max(kg): {dog[0].weight_max}</h4>
+                          <h4>Height Min(cm): {dog[0].height_min}</h4>
+                          <h4>Height Max(cm): {dog[0].height_max}</h4>
                           </div>
                         </div>
 

@@ -10,7 +10,7 @@ export const FILTER_BY_API_OR_DATABASE ="FILTER_BY_API_OR_DATABASE";
 export const ORDER_BY_ALPHABET = "ORDER_BY_ALPHABET"
 export const CREATE_DOG="CREATE_DOG";
 export const DOG_DETAIL = "DOG_DETAIL"
-export const REMOVE_DEATAIL = "REMOVE_DEATAIL";
+export const REMOVE_DETAIL = "REMOVE_DETAIL";
 
 export const getAllDogs = () => {
     return async function (dispatch) {
@@ -41,7 +41,6 @@ export const getAllDogs = () => {
         }
 
 export const FilterByWeight=(payload) =>{
-  console.log(payload)
   return{
     type:FILTER_BY_WEIGHT,
     payload
@@ -50,8 +49,6 @@ export const FilterByWeight=(payload) =>{
 
 
         export const FilterByTemperament = (payload)=>{
-          
-console.log(payload)
       return {
                type:FILTER_BY_TEMPERAMENT,
                payload
@@ -61,7 +58,6 @@ console.log(payload)
 
       export const FilterApiOrDatabase = (payload)=>{
           
-        console.log(payload)
               return {
                        type:FILTER_BY_API_OR_DATABASE,
                        payload
@@ -77,7 +73,7 @@ console.log(payload)
                       }
                 
 export const createDog=(payload)=>{
-  return async function (dispatch) {
+  return async function () {
     const res = await axios.post('http://localhost:3001/dog',payload);
     return res
 }
@@ -94,6 +90,6 @@ export const dogDetail=(idRaza)=>{
 
 export const removeDetail= ()=>{
         return {
-                 type:REMOVE_DEATAIL            
+                 type:REMOVE_DETAIL            
         }
         }   

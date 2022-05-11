@@ -9,6 +9,7 @@ import {
 	getAllTemperaments,
 	FilterByTemperament,
 	FilterApiOrDatabase,
+	removeDetail
 	
 } from '../../redux/action';
 import { Link } from 'react-router-dom';
@@ -17,6 +18,7 @@ import NavBar from '../NavBar/NavBar';
 import Paginado from '../Paginado/Paginado';
 import Loading from '../Loading/Loading';
 import ima from './dog-time400.gif';
+
 import './Home.css';
 
 export default function Home() {
@@ -34,21 +36,22 @@ export default function Home() {
 		setCurrentPage(pageNumber);
 	};
 
-	useEffect(
-		() => {
-			dispatch(getAllDogs());
-		},
-		[ dispatch ]
-	);
+	
 
 	useEffect(
 		() => {
+			dispatch(getAllDogs());
+			dispatch(removeDetail());
 			dispatch(getAllTemperaments());
 		},
 		[ dispatch ]
 	);
 
+
+	
+
 	function handleClick(e) {
+		
 		e.preventDefault();
 		dispatch(getAllDogs());
 		setCurrentPage(1);
@@ -62,7 +65,6 @@ export default function Home() {
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		dispatch(getDogDetail(name));
-	
 		setName('');
 		setCurrentPage(1);
 	};
@@ -89,11 +91,13 @@ export default function Home() {
 	const handleFilterA = (e) => {
 		e.preventDefault();
 		dispatch(FilterApiOrDatabase(e.target.value));
+		setCurrentPage(1);
 	};
 
 	return (
 		<React.Fragment>
 			<NavBar />
+			
 
 			<form className="searchdog">
 				<div className="contSearch">
@@ -163,7 +167,7 @@ export default function Home() {
 							if (typeof d.id === 'string') {
 								if (d.temperaments.length >= 1) {
 									let tem = d.temperaments.map((c) => c.name).toString();
-									console.log(tem);
+									
 									return (
 										<Link to={'Home/' + d.id}>
 											<Card
